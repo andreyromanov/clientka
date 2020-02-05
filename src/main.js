@@ -13,6 +13,7 @@ Vue.config.productionTip = false;
 
 Vue.component('Navbar', require('./components/Navbar.vue').default);
 Vue.component('Footer', require('./components/Footer.vue').default);
+Vue.component('SeoText', require('./components/SeoText.vue').default);
 
 new Vue({
   router,

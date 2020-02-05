@@ -3,7 +3,7 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
           <div class="col"></div>
-          <div class="col-md-2">
+          <div class="col-md-3">
             <ul>
               <li>О нас</li>
               <li>Оплата</li>
@@ -29,7 +29,7 @@
               0 0 0 0 0 0
             </p>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-3">
             <p>
               Нужна помощь?
             </p>
@@ -68,10 +68,10 @@
     background-color: #000;
     padding: 30px 0;
     color: #fff;
+    font-size: 14px;
   }
   li{
     text-decoration: none;
-    font-size: 13px;
     margin-bottom: 8px;
     font-weight: 500;
     line-height: 1.92;
