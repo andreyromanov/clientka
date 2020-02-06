@@ -2,6 +2,7 @@
   <div class="home">
   	
     <img alt="Vue logo" src="../assets/logo.png" />
+   <Popular></Popular>
    <SeoText></SeoText>
   </div>
 </template>
