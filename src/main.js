@@ -15,6 +15,8 @@ Vue.component('Navbar', require('./components/Navbar.vue').default);
 Vue.component('Footer', require('./components/Footer.vue').default);
 Vue.component('SeoText', require('./components/SeoText.vue').default);
 Vue.component('Popular', require('./components/Popular.vue').default);
+Vue.component('MainSlider', require('./components/MainSlider.vue').default);
+Vue.component('Reccomendations', require('./components/Reccomendations.vue').default);
 
 new Vue({
   router,

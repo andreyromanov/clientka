@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-  	
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <MainSlider></MainSlider>
+    <Reccomendations></Reccomendations>
    <Popular></Popular>
    <SeoText></SeoText>
   </div>
