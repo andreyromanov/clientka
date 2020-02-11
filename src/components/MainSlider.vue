@@ -1,6 +1,29 @@
 <template>
-	<div>
-		<h1>Main Slider</h1>
-		<img style="width: 100%" alt="Vue logo" src="https://firebasestorage.googleapis.com/v0/b/vue-shop-2d38f.appspot.com/o/productsrocket.png?alt=media&token=eb31e37a-1994-42cb-8c49-39c7295bd2fc" />
+	<div class="main">
+		<h1>Klientka Shop</h1>
+		<h3>Магазин лучших товаров</h3>
+		<button class="btn btn-danger btn-lg px-5">
+			Купить
+		</button>
 	</div>
 </template>
+<style type="text/css">
+	.main{
+	position: relative;
+    background-color: #c7b39b;
+    background-size: cover;
+    height: 500px;
+	}
+	.main button {
+	position: relative;
+	top: 300px;
+	}
+	.main h1 {
+	position: relative;
+	top: 250px;
+	}
+	.main h3 {
+	position: relative;
+	top: 250px;
+	}
+</style>
