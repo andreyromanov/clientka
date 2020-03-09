@@ -27,6 +27,8 @@ Vue.component('Popular', require('./components/Popular.vue').default);
 Vue.component('MainSlider', require('./components/MainSlider.vue').default);
 Vue.component('Reccomendations', require('./components/Reccomendations.vue').default);
 
+Vue.component('Catalog', require('./components/catalog/Catalog.vue').default);
+
 new Vue({
   router,
   render: h => h(App)

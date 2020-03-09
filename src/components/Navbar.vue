@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <router-link to="/checkout" class="nav-link" href="#">Каталог</router-link>
+            <router-link to="/catalog" class="nav-link" href="#">Каталог</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link" href="#">Контакты</router-link>
