@@ -2,18 +2,24 @@
 	<div>
 		<div class="container my-5">
 			<div class="row">
-				<div class="col-md-3" v-for="product in info" :key="product.id" >
-					<div style="height: 200px" class="text-center">
-			          <img :src="product.image" style="height: 100%;width: 100%">
-			          {{product.price}} $
-			        </div>
+				<div class="col-md-3 border py-3 box-shadow" v-for="product in info" :key="product.id" >
+					<div style="height: 200px;" class="">
+			          <img :src="product.image" style="height: 100%;width: 100%;border-radius: 20px;">     
+			     </div>
 
-			        <div style="background-color: #fff;padding: 10px 0;">
-			        	<router-link to="#">
-			        		<button @click="addToBasket(product.id)" class="btn btn-success btn-lg mt-4 px-5">
-			        			Купить
-			        		</button>
-			        	</router-link>
+	        <div class="row pt-3">
+                <div class="col-md-5 pt-2">
+                   <b style="font-size: 22px;">{{product.price}} $</b>
+                </div>
+                <div class="col-md-7 text-right">
+                  <button @click="addToFav(product.id)" class="btn btn-primary">
+                    <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                  </button>
+                  <button @click="addToBasket(product.id)" class="btn btn-success ml-2">
+                    <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                  </button>
+                </div>
+               
 			       </div>
 				</div>
 			</div>
@@ -37,7 +43,10 @@ export default{
   methods: {
   		addToBasket: function(item){
   			alert(item)
-  	} 
+  	},
+    addToFav: function(item){
+        alert(item)
+    }  
   },
 
   mounted() {

@@ -2,9 +2,11 @@
 	<div class="main">
 		<h1>Klientka Shop</h1>
 		<h3>Магазин лучших товаров</h3>
-		<button class="btn btn-danger btn-lg px-5">
-			Купить
-		</button>
+		<router-link to="/catalog">
+			<button class="btn btn-danger btn-lg px-5">
+				Купить
+			</button>
+		</router-link>
 	</div>
 </template>
 <style type="text/css">
