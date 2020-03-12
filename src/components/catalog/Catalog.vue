@@ -2,7 +2,7 @@
 	<div>
 		<div class="container my-5">
 			<div class="row">
-				<div class="col-md-3 border py-3 box-shadow catalog-item" v-for="product in info" :key="product.id" >
+				<div class="col-md-3 border m-2 py-3 box-shadow catalog-item" v-for="product in info" :key="product.id" >
 
 					<div style="height: 200px;" class="">
 			       <img :src="product.image"  class="image-item">     
@@ -53,7 +53,7 @@ export default{
     axios
       .get('http://localhost:8000/api/products')
       	.then(response => {
-        this.info = Object.entries(response.data).slice(0,3).map(entry => entry[1]);
+        this.info = Object.entries(response.data).map(entry => entry[1]);
       });
   }
 };

@@ -23,3 +23,21 @@
 	width: 100%;
 	border-radius: 20px;
 }
+
+.seo-text{
+	overflow: hidden;
+	height: 300px;
+}
+
+.active{
+	height: auto!important;
+}
+
+.btn-toggle{
+	width: 25px!important;
+	height: 25px!important;
+}
+
+.btn-toggle.active {
+	background: red!important;
+}
