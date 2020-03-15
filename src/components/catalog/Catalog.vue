@@ -2,11 +2,11 @@
 	<div>
 		<div class="container my-5">
 			<div class="row">
-				<div class="col-md-3 border m-2 py-3 box-shadow catalog-item" v-for="product in info" :key="product.id" >
-
+				<div class="col-md-3  my-2" v-for="product in info" :key="product.id" >
+          <div class="border box-shadow px-2 catalog-item">
 					<div style="height: 200px;" class="">
 			       <img :src="product.image"  class="image-item">     
-			     </div>
+			    </div>
 
 	         <div class="row pt-3">
                 <div class="col-md-5 pt-2">
@@ -21,6 +21,7 @@
                   </button>
                 </div>
 		       </div>
+           </div>
 				</div>
 			</div>
 		</div>
