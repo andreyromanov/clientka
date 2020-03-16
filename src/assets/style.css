@@ -24,6 +24,10 @@
 	border-radius: 20px;
 }
 
+.item-image-div{
+	height: 200px;
+}
+
 .seo-text{
 	overflow: hidden;
 	height: 300px;
