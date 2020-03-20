@@ -1,26 +1,23 @@
 <template>
-	<div>
-		<div class="container my-5">
-      <div class="row">
+	<div style="background-color: #e1f5fe">
+		<div class="container pt-3">
+      <!--div class="row">
         <span>Смотрите также:</span>
         <label class="ml-3"><router-link to="/textile">Ткани</router-link></label>
         <label class="ml-3"><a href="">Шторы</a></label>
-      </div>
+      </div-->
 			<div class="row">
-				<div class="col-md-3 my-2" v-for="product in info" :key="product.id" >
+				<div class="col-md-3 my-2" v-for="product in info" :key="product.id">
           <h5>
-            {{product.name}}
+            {{product.title}}
           </h5>
-          <div class="border box-shadow p-2 catalog-item">
+          <div class="border box-shadow p-2 catalog-item" style="background-color: #fff">
   					<div class="item-image-div">
-  			       <img :src="product.image"  class="image-item">     
+  			       <img :src="product.main_img"  class="image-item">     
   			    </div>
 
   	         <div class="row pt-3">
-                  <div class="col-md-5 pt-2">
-                     <b class="h4">{{product.price}} $</b>
-                  </div>
-                  <div class="col-md-7 text-right">
+                  <div class="col-md-12 text-right">
                     <button @click="addToFav(product.id)" class="btn btn-primary">
                       <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
                     </button>
@@ -60,7 +57,7 @@ export default{
 
   mounted() {
     axios
-      .get('http://localhost:8000/api/products')
+      .get('http://localhost:8000/api/mebtex/catalog')
       	.then(response => {
         this.info = Object.entries(response.data).map(entry => entry[1]);
       });
