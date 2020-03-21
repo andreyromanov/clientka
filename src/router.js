@@ -30,7 +30,8 @@ const router = new Router({
     {
       path: "/textile",
       name: "textile",
-      component: Textile
+      component: Textile,
+      props: { id: 111 }
     }
   ]
 });

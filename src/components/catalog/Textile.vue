@@ -1,6 +1,6 @@
 <template>
 	<div style="background-color: #e1f5fe">
-		<div class="container pt-3">
+		<div class="container py-3">
       <!--div class="row">
         <span>Смотрите также:</span>
         <label class="ml-3"><router-link to="/textile">Ткани</router-link></label>
@@ -42,6 +42,7 @@ export default{
   },
   data() {
     return {
+      id: 0,
       info: null
     };
   },
@@ -57,7 +58,7 @@ export default{
 
   mounted() {
     axios
-      .get('http://localhost:8000/api/mebtex/catalog')
+      .get('http://localhost:8000/api/mebtex/catalog?page=1')
       	.then(response => {
         this.info = Object.entries(response.data).map(entry => entry[1]);
       });
