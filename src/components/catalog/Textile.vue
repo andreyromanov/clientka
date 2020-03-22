@@ -29,6 +29,14 @@
            </div>
 				</div>
 			</div>
+      <div class="row text-right pt-3">
+        <div class="col-md-12">
+          <span class="p-2 border" v-for="page in pagination" :key="page.id">
+            <router-link :to="'textile/' + page.url" v-html="page.text">
+            </router-link>
+          </span>
+        </div>
+      </div>
 		</div>
 	</div>
 </template>
@@ -43,7 +51,8 @@ export default{
   data() {
     return {
       id: 0,
-      info: null
+      info: null,
+      pagination: null
     };
   },
 
@@ -60,7 +69,8 @@ export default{
     axios
       .get('http://localhost:8000/api/mebtex/catalog?page=1')
       	.then(response => {
-        this.info = Object.entries(response.data).map(entry => entry[1]);
+        this.info = Object.entries(response.data.data.products).map(entry => entry[1]);
+        this.pagination = Object.entries(response.data.data.pagination).map(entry => entry[1]);
       });
   }
 };
