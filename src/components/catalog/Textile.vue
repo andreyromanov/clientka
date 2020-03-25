@@ -31,9 +31,8 @@
 			</div>
       <div class="row text-right pt-3">
         <div class="col-md-12">
-          <span class="p-2 border" v-for="page in pagination" :key="page.id">
-            <router-link :to="'textile/' + page.url" v-html="page.text">
-            </router-link>
+          <span  @click="updateCatalog(page.url)" class="p-2 border" v-for="page in pagination" :key="page.id" v-html="page.text">
+            
           </span>
         </div>
       </div>
@@ -52,7 +51,8 @@ export default{
     return {
       id: 0,
       info: null,
-      pagination: null
+      pagination: null,
+      page: 1
     };
   },
 
@@ -62,12 +62,25 @@ export default{
   	},
     addToFav: function(item){
         alert(item)
+    },
+    updateCatalog: function(item){
+        this.$router.push({name: 'textile', query : {'page':item} });
+        axios
+      .get('http://localhost:8000/api/mebtex/catalog?page='+item+'')
+        .then(response => {
+        this.info = Object.entries(response.data.data.products).map(entry => entry[1]);
+        this.pagination = Object.entries(response.data.data.pagination).map(entry => entry[1]);
+      });
     }  
   },
 
   mounted() {
+    if(typeof this.$route.query.page !== "undefined"){
+      this.page = this.$route.query.page;
+    }
+
     axios
-      .get('http://localhost:8000/api/mebtex/catalog?page=1')
+      .get('http://localhost:8000/api/mebtex/catalog?page='+this.page+'')
       	.then(response => {
         this.info = Object.entries(response.data.data.products).map(entry => entry[1]);
         this.pagination = Object.entries(response.data.data.pagination).map(entry => entry[1]);
