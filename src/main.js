@@ -32,6 +32,6 @@ Vue.component('Textile', require('./components/catalog/Textile.vue').default);
 
 
 new Vue({
-  router,
-  render: h => h(App)
+    router,
+    render: h => h(App)
 }).$mount("#app");

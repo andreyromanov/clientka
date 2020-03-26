@@ -9,31 +9,30 @@ import Textile from "./views/Textile.vue";
 Vue.use(Router);
 
 const router = new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes: [{
-      path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/about",
-      name: "about",
-      component: About
-    }
-    ,
-    {
-      path: "/catalog",
-      name: "catalog",
-      component: Catalog
-    },
-    {
-      path: "/textile",
-      name: "textile",
-      component: Textile,
-      props: { id: 111 }
-    }
-  ]
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes: [{
+            path: "/",
+            name: "home",
+            component: Home
+        },
+        {
+            path: "/about",
+            name: "about",
+            component: About
+        },
+        {
+            path: "/catalog",
+            name: "catalog",
+            component: Catalog
+        },
+        {
+            path: "/textile",
+            name: "textile",
+            component: Textile,
+            props: { id: 111 }
+        }
+    ]
 });
 
 

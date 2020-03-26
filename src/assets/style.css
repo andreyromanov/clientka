@@ -1,47 +1,71 @@
-@media (min-width: 991px) { 
-	footer{
-		text-align: left;
-	}
-}
-@media (max-width: 757px) { 
-	footer{
-		text-align: center;
-	}
+@media (min-width: 991px) {
+    footer {
+        text-align: left;
+    }
 }
 
-.box-shadow{
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+@media (max-width: 757px) {
+    footer {
+        text-align: center;
+    }
 }
 
-.catalog-item:hover{
-	cursor: pointer;
-	box-shadow: 5px 5px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.box-shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.image-item{
-	height: 100%;
-	width: 100%;
-	border-radius: 20px;
+.catalog-item:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.item-image-div{
-	height: 200px;
+.image-item {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
 }
 
-.seo-text{
-	overflow: hidden;
-	height: 300px;
+.item-image-div {
+    height: 200px;
 }
 
-.active{
-	height: auto!important;
+.seo-text {
+    overflow: hidden;
+    height: 300px;
 }
 
-.btn-toggle{
-	width: 25px!important;
-	height: 25px!important;
+.active {
+    height: auto !important;
+}
+
+.btn-toggle {
+    width: 25px !important;
+    height: 25px !important;
 }
 
 .btn-toggle.active {
-	background: red!important;
+    background: red !important;
+}
+
+.nav-span:hover{
+	cursor: pointer;
+	background: lightgreen;
+	font-weight: 700;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+.loading{
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #DCDCDC;
+	opacity: 0.7;
+	display: none;
+}
+
+.show{
+	display: block!important;
 }
