@@ -2,11 +2,11 @@
     <div>
         <div class="container my-5">
             <div class="row">
-                <span>Смотрите также:</span>
+                <!-- <span>Смотрите также:</span>
                 <label class="ml-3">
                     <router-link to="/textile">Ткани</router-link>
                 </label>
-                <label class="ml-3"><a href="">Шторы</a></label>
+                <label class="ml-3"><a href="">Шторы</a></label> -->
             </div>
             <div class="row">
                 <div class="col-md-3 my-2" v-for="product in info" :key="product.id">
